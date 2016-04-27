@@ -13,3 +13,8 @@ Which will return:
   Hash
   Heart
   ```
+
+Coded entirey in python
+
+**Note:** For best results, I recommend .png image files, but it should work for other image types.
+**TRY AT YOUR OWN RISK**
