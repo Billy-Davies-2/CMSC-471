@@ -8,17 +8,16 @@
 
 # imports
 from PIL import Image
-from numpy import *
+import numpy as np
 import sys
-from sklearn.neighbors import NearestNeighbors
 
 # convert an image to black and white.
 def toBlackWhite(filename):
     image = Image.open(filename)
     image = image.convert('1')
-    data = array(image)
+    data = np.array(image)
     #data = [image.getpixel((x, y)) for x in range(image.width) for y in range(image.height)]
-    bitmap = empty((data.shape[0],data.shape[1]),None)    #New array with same size as A
+    bitmap = np.empty((data.shape[0],data.shape[1]),None)    #New array with same size as A
 
     for i in range(len(data)):
         for j in range(len(data[i])):
@@ -26,6 +25,7 @@ def toBlackWhite(filename):
                 bitmap[i][j]=0
             else:
                 bitmap[i][j]=1
+    np.savetxt(filename+'.csv', bitmap, fmt='%d', delimiter=",")
     return bitmap
 
 def main():
