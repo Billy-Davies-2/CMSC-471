@@ -3,7 +3,7 @@
 This is my image classification code.
 
 Usage:
-  `python davies4Proj3.py <Image-File>.png`
+  `python davies4Proj3.py <Image-File>.jpg`
 
 Which will return:
   ```
@@ -16,5 +16,6 @@ Which will return:
 
 Coded entirey in python
 
-**Note:** For best results, I recommend .png image files, but it should work for other image types.
-**TRY AT YOUR OWN RISK**
+**REQUIREMENTS**
+Python 3
+Training set of images to be placed in the `../Training/` directory relative to this project file.
